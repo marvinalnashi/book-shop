@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "title": "The Atlas Six",
+    "author": "Stephen King",
+    "year": 2022,
+    "genre": "Fantasy",
+    "language": "English",
+    "pages": 608,
+    "publisher": "Scribner",
+    "origin": "Germany",
+    "price": 15.00,
+    "oldPrice": 20.00,
+    "description": "A fantasy novel by Stephen King with dark themes...",
+    "cover": "/Fantasy/TheAtlasSix-Cover.jpg",
+    "spine": "/Fantasy/TheAtlasSix-Spine.jpeg",
+    "category": "Best Sellers"
+  }
+]
