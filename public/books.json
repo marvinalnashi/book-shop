@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "The Atlas Six",
-    "author": "Stephen King",
+    "author": "Olivie Blake",
     "year": 2022,
     "genre": "Fantasy",
     "language": "English",
@@ -11,9 +11,9 @@
     "origin": "Germany",
     "price": 15.00,
     "oldPrice": 20.00,
-    "description": "A fantasy novel by Stephen King with dark themes...",
+    "description": "A fantasy novel by Olivie Blake...",
     "cover": "/Fantasy/TheAtlasSix-Cover.jpg",
-    "spine": "/Fantasy/TheAtlasSix-Spine.jpeg",
-    "category": "Best Sellers"
+    "category": "Best Sellers",
+    "quantity": 6
   }
 ]
