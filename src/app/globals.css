@@ -19,25 +19,41 @@
   }
 }
 
-.bookshelf-header {
+.bookshelf-container {
+  position: relative;
   background-image: url('/bookshelf.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 320px;
   margin-bottom: 0;
-}
-
-.bookshelf-body {
-  background-image: url('/bookshelf.svg');
-  background-repeat: repeat-y;
-  background-size: cover;
-  padding: 1rem;
   overflow: visible;
 }
+
+.genre-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px #000;
+  z-index: 10;
+}
+
+.books-row {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  padding: 0 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  overflow: visible;
+}
+
 
 body {
   background: var(--background);
