@@ -67,12 +67,12 @@ export default function MetaphorPage() {
                 )
 
                 return (
-                    <div key={genre} className="mb-4">
-                        <div className="relative h-12 flex items-center justify-center bg-[url('/Shelf Template_v2.svg')] bg-no-repeat bg-cover">
+                    <div key={genre} className="overflow-visible">
+                        <div className="bookshelf-header">
                             <span className="text-lg font-bold text-white drop-shadow">{genre}</span>
                         </div>
 
-                        <div className="relative bg-[url('/Shelf Template_v2.svg')] bg-repeat-y bg-cover py-4 px-2 overflow-visible">
+                        <div className="bookshelf-body">
                             <motion.div
                                 key={`${genre}-${currentPage}`}
                                 initial={{ x: direction === 'forward' ? 300 : -300, opacity: 0 }}
@@ -84,7 +84,7 @@ export default function MetaphorPage() {
                                 {visibleBooks.map((book) => (
                                     <div
                                         key={book.id}
-                                        className="relative group cursor-pointer overflow-visible perspective-[1200px]"
+                                        className="relative group cursor-pointer perspective-[1000px] overflow-visible"
                                         onMouseEnter={() => setHoveredBookId(book.id)}
                                         onMouseLeave={() => setHoveredBookId(null)}
                                         onClick={() => handleClick(book.id)}
@@ -94,10 +94,10 @@ export default function MetaphorPage() {
                                             initial={false}
                                             animate={
                                                 hoveredBookId === book.id
-                                                    ? { rotateY: 90, z: 50, scale: 1.1 }
-                                                    : { rotateY: 0, z: 0, scale: 1 }
+                                                    ? { rotateY: 90, translateZ: 60 }
+                                                    : { rotateY: 0, translateZ: 0 }
                                             }
-                                            transition={{ duration: 0.6, ease: 'easeInOut' }}
+                                            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
                                         >
                                             <Image
                                                 src={book.spine}
@@ -111,11 +111,11 @@ export default function MetaphorPage() {
                                         <AnimatePresence>
                                             {hoveredBookId === book.id && (
                                                 <motion.div
-                                                    className="absolute z-50 left-1/2 -translate-x-1/2 -top-[260px] w-48 bg-white border shadow-xl rounded"
+                                                    className="absolute z-50 left-1/2 -translate-x-1/2 -top-[240px] w-48 bg-white border shadow-xl rounded"
                                                     initial={{ opacity: 0, scale: 0.9 }}
                                                     animate={{ opacity: 1, scale: 1 }}
                                                     exit={{ opacity: 0, scale: 0.9 }}
-                                                    transition={{ duration: 0.3 }}
+                                                    transition={{ duration: 0.2 }}
                                                     onClick={(e) => e.stopPropagation()}
                                                 >
                                                     <Image
