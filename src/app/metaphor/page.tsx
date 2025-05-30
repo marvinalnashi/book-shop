@@ -108,12 +108,15 @@ export default function MetaphorPage() {
                                     <AnimatePresence>
                                         {hoveredBookId === book.id && (
                                             <motion.div
-                                                className="absolute z-50 left-1/2 -translate-x-1/2 -top-[240px] w-48 bg-white border shadow-xl rounded"
+                                                className="absolute z-50 left-1/2 -translate-x-1/2 -top-[240px] w-48 bg-white border shadow-xl rounded cursor-pointer"
                                                 initial={{ opacity: 0, scale: 0.9 }}
                                                 animate={{ opacity: 1, scale: 1 }}
                                                 exit={{ opacity: 0, scale: 0.9 }}
                                                 transition={{ duration: 0.2 }}
-                                                onClick={(e) => e.stopPropagation()}
+                                                onClick={(e) => {
+                                                    e.stopPropagation()
+                                                    handleClick(book.id)
+                                                }}
                                             >
                                                 <Image
                                                     src={book.cover}
