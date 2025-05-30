@@ -1,23 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import books from '../../../public/books.json'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-
-interface Book {
-    id: number
-    title: string
-    author: string
-    year: number
-    genre: string
-    category: string
-    price: number
-    oldPrice?: number
-    cover: string
-    spine: string
-}
 
 const GENRES = ['Fantasy', 'Thriller', 'Non-fiction']
 const ITEMS_PER_PAGE = 20
@@ -26,18 +13,52 @@ export default function MetaphorPage() {
     const [hoveredBookId, setHoveredBookId] = useState<number | null>(null)
     const [currentPage, setCurrentPage] = useState(1)
     const [direction, setDirection] = useState<'forward' | 'backward'>('forward')
+    const [searchQuery, setSearchQuery] = useState('')
+    const [sortOrder, setSortOrder] = useState<'title' | 'year'>('title')
+
     const router = useRouter()
 
-    const booksByGenre: Record<string, Book[]> = {}
+    const filteredBooks = useMemo(() => {
+        return books
+            .filter((b) =>
+                b.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                b.author.toLowerCase().includes(searchQuery.toLowerCase())
+            )
+            .sort((a, b) =>
+                sortOrder === 'title'
+                    ? a.title.localeCompare(b.title)
+                    : b.year - a.year
+            )
+    }, [searchQuery, sortOrder])
+
+    const booksByGenre: Record<string, typeof books> = {}
     GENRES.forEach((genre) => {
-        booksByGenre[genre] = books.filter((b) => b.category === genre)
+        booksByGenre[genre] = filteredBooks.filter((b) => b.category === genre)
     })
 
     const handleClick = (id: number) => router.push(`/book/${id}`)
 
     return (
-        <div className="space-y-12 px-6 py-8 overflow-visible relative z-10">
-            <h2 className="text-2xl font-bold">All Book Categories</h2>
+        <div className="px-6 py-24 relative z-10">
+            <h2 className="text-2xl font-bold mb-4">All Book Categories</h2>
+
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    className="border px-4 py-2 rounded w-60"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <select
+                    value={sortOrder}
+                    onChange={(e) => setSortOrder(e.target.value as any)}
+                    className="border px-4 py-2 rounded"
+                >
+                    <option value="title">Sort by Title</option>
+                    <option value="year">Sort by Year</option>
+                </select>
+            </div>
 
             {GENRES.map((genre) => {
                 const visibleBooks = booksByGenre[genre].slice(
@@ -46,13 +67,12 @@ export default function MetaphorPage() {
                 )
 
                 return (
-                    <div key={genre} className="relative space-y-2 overflow-visible">
-                        <div className="text-xl font-semibold text-gray-800">{genre}</div>
+                    <div key={genre} className="mb-4">
+                        <div className="relative h-12 flex items-center justify-center bg-[url('/Shelf Template_v2.svg')] bg-no-repeat bg-cover">
+                            <span className="text-lg font-bold text-white drop-shadow">{genre}</span>
+                        </div>
 
-                        <div
-                            className="relative bg-cover bg-no-repeat bg-center py-6 px-4 overflow-visible"
-                            style={{ backgroundImage: "url('/Shelf Template_v2.svg')" }}
-                        >
+                        <div className="relative bg-[url('/Shelf Template_v2.svg')] bg-repeat-y bg-cover py-4 px-2 overflow-visible">
                             <motion.div
                                 key={`${genre}-${currentPage}`}
                                 initial={{ x: direction === 'forward' ? 300 : -300, opacity: 0 }}
@@ -64,7 +84,7 @@ export default function MetaphorPage() {
                                 {visibleBooks.map((book) => (
                                     <div
                                         key={book.id}
-                                        className="relative group cursor-pointer perspective-[1000px] overflow-visible"
+                                        className="relative group cursor-pointer overflow-visible perspective-[1200px]"
                                         onMouseEnter={() => setHoveredBookId(book.id)}
                                         onMouseLeave={() => setHoveredBookId(null)}
                                         onClick={() => handleClick(book.id)}
@@ -74,10 +94,10 @@ export default function MetaphorPage() {
                                             initial={false}
                                             animate={
                                                 hoveredBookId === book.id
-                                                    ? { rotateY: 90, translateZ: 60 }
-                                                    : { rotateY: 0, translateZ: 0 }
+                                                    ? { rotateY: 90, z: 50, scale: 1.1 }
+                                                    : { rotateY: 0, z: 0, scale: 1 }
                                             }
-                                            transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+                                            transition={{ duration: 0.6, ease: 'easeInOut' }}
                                         >
                                             <Image
                                                 src={book.spine}
@@ -91,11 +111,11 @@ export default function MetaphorPage() {
                                         <AnimatePresence>
                                             {hoveredBookId === book.id && (
                                                 <motion.div
-                                                    className="absolute z-50 left-1/2 -translate-x-1/2 -top-[240px] w-48 bg-white border shadow-xl rounded"
+                                                    className="absolute z-50 left-1/2 -translate-x-1/2 -top-[260px] w-48 bg-white border shadow-xl rounded"
                                                     initial={{ opacity: 0, scale: 0.9 }}
                                                     animate={{ opacity: 1, scale: 1 }}
                                                     exit={{ opacity: 0, scale: 0.9 }}
-                                                    transition={{ duration: 0.2 }}
+                                                    transition={{ duration: 0.3 }}
                                                     onClick={(e) => e.stopPropagation()}
                                                 >
                                                     <Image
