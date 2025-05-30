@@ -8,8 +8,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /*--font-sans: var(--font-geist-sans);*/
-  /*--font-mono: var(--font-geist-mono);*/
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,9 +23,23 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  height: 320px;
+  height: 300px;
   margin-bottom: 0;
   overflow: visible;
+}
+
+.bookshelf-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 48px;
+  width: 100%;
+  background-image: url('/bookshelf.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: 1;
 }
 
 .genre-title {
@@ -44,7 +56,8 @@
 
 .books-row {
   position: absolute;
-  top: 70px;
+  top: 60px;
+  bottom: 48px;
   left: 0;
   right: 0;
   padding: 0 1rem;
@@ -52,8 +65,8 @@
   gap: 0.5rem;
   align-items: flex-end;
   overflow: visible;
+  z-index: 5;
 }
-
 
 body {
   background: var(--background);
