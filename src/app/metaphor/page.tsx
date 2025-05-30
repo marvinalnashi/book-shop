@@ -81,7 +81,7 @@ export default function MetaphorPage() {
                             {visibleBooks.map((book) => (
                                 <div
                                     key={book.id}
-                                    className="relative group cursor-pointer perspective-[1000px] overflow-visible"
+                                    className="relative group cursor-pointer overflow-visible"
                                     onMouseEnter={() => setHoveredBookId(book.id)}
                                     onMouseLeave={() => setHoveredBookId(null)}
                                     onClick={() => handleClick(book.id)}
