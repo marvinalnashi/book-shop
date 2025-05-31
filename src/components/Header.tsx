@@ -31,6 +31,15 @@ export default function Header() {
                 </Link>
 
                 <div className="flex items-center gap-4">
+                    <button
+                        onClick={() => {
+                            sessionStorage.clear()
+                            location.reload()
+                        }}
+                        className="px-4 py-1 text-sm border border-gray-500 rounded hover:bg-gray-100"
+                    >
+                        Start New Session
+                    </button>
                     <Link href="/cart" className="relative flex items-center gap-1 font-semibold text-gray-800">
                         🛒 Cart
                         {totalItems > 0 && (

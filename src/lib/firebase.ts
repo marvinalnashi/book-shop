@@ -18,5 +18,9 @@ export async function saveSessionTime(sessionId: string, mode: 'standard' | 'met
     const ref = doc(db, 'sessions', sessionId)
     const snap = await getDoc(ref)
     const data = snap.exists() ? snap.data() : {}
-    await setDoc(ref, { ...data, [`${mode}Time`]: time }, { merge: true })
+
+    const prevTimes: number[] = Array.isArray(data[`${mode}Time`]) ? data[`${mode}Time`] : []
+    const newTimes = [...prevTimes, time]
+
+    await setDoc(ref, { [`${mode}Time`]: newTimes }, { merge: true })
 }
