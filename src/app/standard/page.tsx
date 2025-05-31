@@ -16,7 +16,7 @@ interface Book {
     cover: string
 }
 
-const ITEMS_PER_PAGE = 8
+const ITEMS_PER_PAGE = 10
 
 export default function HomePage() {
     const [searchQuery, setSearchQuery] = useState('')
@@ -62,7 +62,7 @@ export default function HomePage() {
             <div className="flex justify-between items-center flex-wrap gap-4">
                 <input
                     type="text"
-                    placeholder="🔍 Search by title or author..."
+                    placeholder="Search by title or author"
                     className="border px-4 py-2 rounded w-full sm:w-1/2 md:w-1/3"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
@@ -87,8 +87,8 @@ export default function HomePage() {
             {Object.entries(grouped).map(([category, list]) => (
                 <section key={category}>
                     <h3 className="text-xl font-bold mb-4">{category}</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                        {list.map(book => <BookCard key={book.id} book={book} />)}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                    {list.map(book => <BookCard key={book.id} book={book} />)}
                     </div>
                 </section>
             ))}
