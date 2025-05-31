@@ -3,6 +3,7 @@
 import { useCart } from '@/context/CartContext'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { saveSessionTime } from '@/lib/firebase'
 
 export default function CartPage() {
     const { items, updateQuantity, removeItem, clearCart } = useCart()
@@ -13,11 +14,20 @@ export default function CartPage() {
     const discount = subtotal > 50 ? 5 : 0
     const total = subtotal - discount
 
-    const handleCheckout = () => {
+    const handleCheckout = async () => {
         setLoading(true)
-        setTimeout(() => {
+        setTimeout(async () => {
+            const sessionId = sessionStorage.getItem('sessionId')
+            const startTime = parseInt(sessionStorage.getItem('startTime') || '0', 10)
+            const mode = sessionStorage.getItem('mode') as 'standard' | 'metaphor'
+            const duration = Date.now() - startTime
+
+            if (sessionId && mode && startTime > 0) {
+                await saveSessionTime(sessionId, mode, duration)
+            }
+
             clearCart()
-            router.push('/')
+            router.push('/lobby')
         }, 1500)
     }
 
