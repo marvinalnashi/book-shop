@@ -31,23 +31,6 @@ export default function Header() {
                 </Link>
 
                 <div className="flex items-center gap-4">
-                    <button
-                        onClick={() => switchInterface('standard')}
-                        className={`px-3 py-1 rounded ${
-                            activeTab === 'standard' ? 'bg-blue-600 text-white' : 'bg-gray-200'
-                        }`}
-                    >
-                        Standard
-                    </button>
-                    <button
-                        onClick={() => switchInterface('metaphor')}
-                        className={`px-3 py-1 rounded ${
-                            activeTab === 'metaphor' ? 'bg-blue-600 text-white' : 'bg-gray-200'
-                        }`}
-                    >
-                        Metaphor
-                    </button>
-
                     <Link href="/cart" className="relative flex items-center gap-1 font-semibold text-gray-800">
                         🛒 Cart
                         {totalItems > 0 && (

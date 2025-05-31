@@ -27,7 +27,7 @@ export default function CartPage() {
             }
 
             clearCart()
-            router.push('/lobby')
+            router.push('/')
         }, 1500)
     }
 
