@@ -22,8 +22,16 @@ export default function HomePage() {
     const [searchQuery, setSearchQuery] = useState('')
     const [sortBy, setSortBy] = useState('featured')
     const [currentPage, setCurrentPage] = useState(1)
-
     const [filteredBooks, setFilteredBooks] = useState<Book[]>(booksData)
+
+    function generateBestSellers(books: Book[]): Book[] {
+        const selectedCategories = ["Fantasy", "Non-Fiction", "Thriller"];
+        const pool = books.filter((book) =>
+            selectedCategories.includes(book.genre)
+        );
+        const shuffled = [...pool].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 10);
+    }
 
     useEffect(() => {
         let result = [...booksData]
@@ -57,6 +65,8 @@ export default function HomePage() {
         return acc
     }, {} as Record<string, Book[]>)
 
+    const bestSellers = generateBestSellers(booksData)
+
     return (
         <div className="space-y-12">
             <div className="flex justify-between items-center flex-wrap gap-4">
@@ -82,13 +92,19 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <h2 className="text-2xl font-bold">All Books</h2>
+            <h2 className="text-2xl font-bold">Best Seller</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                {bestSellers.map(book => (
+                    <BookCard key={book.id} book={book} />
+                ))}
+            </div>
 
+            <h2 className="text-2xl font-bold mt-12">All Books</h2>
             {Object.entries(grouped).map(([category, list]) => (
                 <section key={category}>
                     <h3 className="text-xl font-bold mb-4">{category}</h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-                    {list.map(book => <BookCard key={book.id} book={book} />)}
+                        {list.map(book => <BookCard key={book.id} book={book} />)}
                     </div>
                 </section>
             ))}
