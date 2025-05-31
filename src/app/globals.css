@@ -33,12 +33,12 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 48px;
+  height: 60px;
   width: 100%;
   background-image: url('/bookshelf.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   z-index: 1;
 }
 
@@ -57,10 +57,10 @@
 .books-row {
   position: absolute;
   top: 60px;
-  bottom: 48px;
+  bottom: 30px;
   left: 0;
   right: 0;
-  padding: 0 1rem;
+  padding: 0 1.6rem;
   display: flex;
   gap: 0.5rem;
   align-items: flex-end;

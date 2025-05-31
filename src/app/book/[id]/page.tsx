@@ -98,9 +98,9 @@ export default function BookPage() {
                     >
                         Add to cart
                     </button>
-                    <button className="bg-black text-white font-bold py-2 px-6 rounded hover:bg-gray-800">
-                        Buy now
-                    </button>
+                    {/*<button className="bg-black text-white font-bold py-2 px-6 rounded hover:bg-gray-800">*/}
+                    {/*    Buy now*/}
+                    {/*</button>*/}
                 </div>
 
                 <div className="mt-10">
