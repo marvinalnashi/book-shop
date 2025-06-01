@@ -341,9 +341,27 @@
     "category": "Non-fiction",
     "quantity": 6
   },
-
   {
     "id": 20,
+    "title": "The Subtle Art of Not Giving a Fuck",
+    "author": "Mark Manson",
+    "year": 2016,
+    "genre": "Non-fiction",
+    "language": "English",
+    "pages": 228,
+    "publisher": "Random House",
+    "origin": "United States",
+    "price": 15.99,
+    "oldPrice": 21.99,
+    "description": "Neurosurgeon Paul Kalanithi reflects on his life and mortality after being diagnosed with terminal cancer, offering insights into the meaning of life.",
+    "cover": "/Non-Fiction/TheSubtleArtOfNotgivingAFck-Cover.jpg",
+    "spine": "/Non-Fiction/TheSubtleArtofNotGivingaFck-Spine.png",
+    "category": "Non-fiction",
+    "quantity": 6
+  },
+
+  {
+    "id": 21,
     "title": "A Flicker in the Dark",
     "author": "Stacy Willingham",
     "year": 2022,
@@ -361,7 +379,7 @@
     "quantity": 6
   },
   {
-    "id": 21,
+    "id": 22,
     "title": "A Good Girl's Guide to Murder",
     "author": "Holly Jackson",
     "year": 2019,
@@ -379,7 +397,7 @@
     "quantity": 6
   },
   {
-    "id": 22,
+    "id": 23,
     "title": "And Then There Were None",
     "author": "Agatha Christie",
     "year": 1939,
@@ -397,7 +415,7 @@
     "quantity": 6
   },
   {
-    "id": 23,
+    "id": 24,
     "title": "Angels and Demons",
     "author": "Dan Brown",
     "year": 2000,
@@ -415,7 +433,7 @@
     "quantity": 6
   },
   {
-    "id": 24,
+    "id": 25,
     "title": "Behind Closed Doors",
     "author": "B.A. Paris",
     "year": 2016,
@@ -433,7 +451,7 @@
     "quantity": 6
   },
   {
-    "id": 25,
+    "id": 26,
     "title": "Dark Matter",
     "author": "Blake Crouch",
     "year": 2016,
@@ -451,7 +469,7 @@
     "quantity": 6
   },
   {
-    "id": 26,
+    "id": 27,
     "title": "Dark Places",
     "author": "Gillian Flynn",
     "year": 2009,
@@ -469,7 +487,7 @@
     "quantity": 6
   },
   {
-    "id": 27,
+    "id": 28,
     "title": "Gone Girl",
     "author": "Gillian Flynn",
     "year": 2012,
@@ -487,7 +505,7 @@
     "quantity": 6
   },
   {
-    "id": 28,
+    "id": 29,
     "title": "Inferno",
     "author": "Dan Brown",
     "year": 2013,
@@ -505,7 +523,7 @@
     "quantity": 6
   },
   {
-    "id": 29,
+    "id": 30,
     "title": "None of This Is True",
     "author": "Lisa Jewell",
     "year": 2023,
@@ -523,7 +541,7 @@
     "quantity": 6
   },
   {
-    "id": 30,
+    "id": 31,
     "title": "One of Us Is Lying",
     "author": "Karen M. McManus",
     "year": 2017,
@@ -541,7 +559,7 @@
     "quantity": 6
   },
   {
-    "id": 31,
+    "id": 32,
     "title": "Rock Paper Scissors",
     "author": "Alice Feeney",
     "year": 2021,
@@ -559,7 +577,7 @@
     "quantity": 6
   },
   {
-    "id": 32,
+    "id": 33,
     "title": "Sharp Objects",
     "author": "Gillian Flynn",
     "year": 2006,
@@ -577,7 +595,7 @@
     "quantity": 6
   },
   {
-    "id": 33,
+    "id": 34,
     "title": "The Girl on the Train",
     "author": "Paula Hawkins",
     "year": 2015,
@@ -595,7 +613,7 @@
     "quantity": 6
   },
   {
-    "id": 34,
+    "id": 35,
     "title": "The Girl Who Kicked the Hornet's Nest",
     "author": "Stieg Larsson",
     "year": 2009,
@@ -613,7 +631,7 @@
     "quantity": 6
   },
   {
-    "id": 35,
+    "id": 36,
     "title": "The Girl Who Played With Fire",
     "author": "Stieg Larsson",
     "year": 2006,
@@ -631,7 +649,7 @@
     "quantity": 6
   },
   {
-    "id": 36,
+    "id": 37,
     "title": "The Girl With the Dragon Tattoo",
     "author": "Stieg Larsson",
     "year": 2005,
@@ -649,97 +667,7 @@
     "quantity": 6
   },
   {
-    "id": 37,
-    "title": "The Housemaid",
-    "author": "Freida McFadden",
-    "year": 2022,
-    "genre": "Thriller",
-    "language": "English",
-    "pages": 336,
-    "publisher": "Grand Central Publishing",
-    "origin": "United States",
-    "price": 12.99,
-    "oldPrice": 17.99,
-    "description": "A woman takes a job as a live-in housemaid, only to discover that the family's secrets are more dangerous than she imagined.",
-    "cover": "/Thriller/TheHouseMaid-Cover.jpg",
-    "spine": "/Thriller/TheHouseMaid-Spine.jpeg",
-    "category": "Thriller",
-    "quantity": 6
-  },
-  {
     "id": 38,
-    "title": "The Housemaid's Secret",
-    "author": "Freida McFadden",
-    "year": 2023,
-    "genre": "Thriller",
-    "language": "English",
-    "pages": 352,
-    "publisher": "Bookouture",
-    "origin": "United States",
-    "price": 13.99,
-    "oldPrice": 18.99,
-    "description": "The sequel to 'The Housemaid' continues the gripping tale of deception and survival as secrets threaten to unravel.",
-    "cover": "/Thriller/TheHouseMaidsSecret-Cover.jpg",
-    "spine": "/Thriller/TheHouseMaidsSecret-Spine.jpeg",
-    "category": "Thriller",
-    "quantity": 6
-  },
-  {
-    "id": 39,
-    "title": "The Lost Symbol",
-    "author": "Dan Brown",
-    "year": 2009,
-    "genre": "Thriller",
-    "language": "English",
-    "pages": 509,
-    "publisher": "Doubleday",
-    "origin": "United States",
-    "price": 14.99,
-    "oldPrice": 19.99,
-    "description": "Robert Langdon uncovers a hidden history and a secret society while racing against time to save a kidnapped friend.",
-    "cover": "/Thriller/TheLostSymbol-Cover.jpg",
-    "spine": "/Thriller/TheLostSymbol-Spine.png",
-    "category": "Thriller",
-    "quantity": 6
-  },
-  {
-    "id": 40,
-    "title": "Then She Was Gone",
-    "author": "Lisa Jewell",
-    "year": 2018,
-    "genre": "Thriller",
-    "language": "English",
-    "pages": 368,
-    "publisher": "Atria Books",
-    "origin": "United Kingdom",
-    "price": 13.99,
-    "oldPrice": 18.99,
-    "description": "A mother's search for her missing daughter leads to shocking revelations in this gripping psychological thriller.",
-    "cover": "/Thriller/ThenSheWasGone-Cover.jpg",
-    "spine": "/Thriller/ThenSheWasGone-Spine.jpeg",
-    "category": "Thriller",
-    "quantity": 6
-  },
-  {
-    "id": 41,
-    "title": "The Only One Left",
-    "author": "Riley Sager",
-    "year": 2023,
-    "genre": "Thriller",
-    "language": "English",
-    "pages": 368,
-    "publisher": "Dutton",
-    "origin": "United States",
-    "price": 14.99,
-    "oldPrice": 19.99,
-    "description": "A caregiver uncovers dark secrets in a decaying mansion while tending to a woman accused of a decades-old murder.",
-    "cover": "/Thriller/TheOnlyOneLeft-Cover.jpg",
-    "spine": "/Thriller/TheOnlyOneLeft-Spine.jpeg",
-    "category": "Thriller",
-    "quantity": 6
-  },
-  {
-    "id": 42,
     "title": "The Paris Apartment",
     "author": "Lucy Foley",
     "year": 2022,
@@ -757,25 +685,7 @@
     "quantity": 6
   },
   {
-    "id": 43,
-    "title": "The Silent Patient",
-    "author": "Alex Michaelides",
-    "year": 2019,
-    "genre": "Thriller",
-    "language": "English",
-    "pages": 336,
-    "publisher": "Celadon Books",
-    "origin": "United Kingdom",
-    "price": 14.99,
-    "oldPrice": 19.99,
-    "description": "A psychotherapist becomes obsessed with uncovering the truth behind a patient's silence after she commits a shocking act of violence.",
-    "cover": "/Thriller/TheSilentPatient-Cover.jpg",
-    "spine": "/Thriller/TheSilentPatient-Spine.jpeg",
-    "category": "Thriller",
-    "quantity": 6
-  },
-  {
-    "id": 44,
+    "id": 39,
     "title": "The Woman in the Window",
     "author": "A.J. Finn",
     "year": 2018,
@@ -793,7 +703,7 @@
     "quantity": 6
   },
   {
-    "id": 45,
+    "id": 40,
     "title": "Verity",
     "author": "Colleen Hoover",
     "year": 2018,
@@ -812,7 +722,7 @@
   },
 
   {
-    "id": 46,
+    "id": 41,
     "title": "A Curse for True Love",
     "author": "Stephanie Garber",
     "year": 2023,
@@ -830,7 +740,7 @@
     "quantity": 6
   },
   {
-    "id": 47,
+    "id": 42,
     "title": "Assistant to the Villain",
     "author": "Hannah Nicole Maehrer",
     "year": 2023,
@@ -848,7 +758,7 @@
     "quantity": 6
   },
   {
-    "id": 48,
+    "id": 43,
     "title": "Fairy Tale",
     "author": "Stephen King",
     "year": 2022,
@@ -866,7 +776,7 @@
     "quantity": 6
   },
   {
-    "id": 49,
+    "id": 44,
     "title": "Heartless Hunter",
     "author": "Kristen Ciccarelli",
     "year": 2024,
@@ -884,7 +794,7 @@
     "quantity": 6
   },
   {
-    "id": 50,
+    "id": 45,
     "title": "How the King of Elfhame Learned to Hate Stories",
     "author": "Holly Black",
     "year": 2020,
@@ -902,7 +812,7 @@
     "quantity": 6
   },
   {
-    "id": 51,
+    "id": 46,
     "title": "Legendborn",
     "author": "Tracy Deonn",
     "year": 2020,
@@ -920,7 +830,7 @@
     "quantity": 6
   },
   {
-    "id": 52,
+    "id": 47,
     "title": "Once Upon a Broken Heart",
     "author": "Stephanie Garber",
     "year": 2021,
@@ -938,7 +848,7 @@
     "quantity": 6
   },
   {
-    "id": 53,
+    "id": 48,
     "title": "The Adventures of Amina Al-Sirafi",
     "author": "Shannon Chakraborty",
     "year": 2023,
@@ -956,7 +866,7 @@
     "quantity": 6
   },
   {
-    "id": 54,
+    "id": 49,
     "title": "The Atlas Six",
     "author": "Olivie Blake",
     "year": 2022,
@@ -974,7 +884,7 @@
     "quantity": 6
   },
   {
-    "id": 55,
+    "id": 50,
     "title": "The Ballad of Never After",
     "author": "Stephanie Garber",
     "year": 2022,
@@ -992,7 +902,7 @@
     "quantity": 6
   },
   {
-    "id": 56,
+    "id": 51,
     "title": "The Ballad of Songbirds and Snakes",
     "author": "Suzanne Collins",
     "year": 2020,
@@ -1010,7 +920,7 @@
     "quantity": 6
   },
   {
-    "id": 57,
+    "id": 52,
     "title": "The Eye of the Bedlam Bride",
     "author": "Matt Dinniman",
     "year": 2023,
@@ -1028,7 +938,7 @@
     "quantity": 6
   },
   {
-    "id": 58,
+    "id": 53,
     "title": "The Midnight Library",
     "author": "Matt Haig",
     "year": 2020,
@@ -1046,7 +956,7 @@
     "quantity": 6
   },
   {
-    "id": 59,
+    "id": 54,
     "title": "The Sunlit Man",
     "author": "Brandon Sanderson",
     "year": 2023,
@@ -1064,7 +974,7 @@
     "quantity": 6
   },
   {
-    "id": 60,
+    "id": 55,
     "title": "Tress of the Emerald Sea",
     "author": "Brandon Sanderson",
     "year": 2023,
@@ -1082,7 +992,7 @@
     "quantity": 6
   },
   {
-    "id": 61,
+    "id": 56,
     "title": "Yumi and the Nightmare Painter",
     "author": "Brandon Sanderson",
     "year": 2023,
@@ -1096,6 +1006,79 @@
     "description": "In this Cosmere novel, Yumi, a spirit summoner, and Nikaro, a nightmare painter, find their lives intertwined as they confront a world filled with darkness and dreams.",
     "cover": "/Fantasy/YumiAndTheNightmarePainter-Cover.jpg",
     "spine": "/Fantasy/YumiAndTheNightmarePainter-Spine.jpeg",
+    "category": "Fantasy",
+    "quantity": 6
+  },
+
+  {
+    "id": 57,
+    "title": "A Court of Wings and Ruin",
+    "author": "Sarah J. Maas",
+    "year": 2023,
+    "genre": "Fantasy",
+    "language": "English",
+    "pages": 479,
+    "publisher": "Dragonsteel Entertainment",
+    "origin": "United States",
+    "price": 18.99,
+    "oldPrice": 24.99,
+    "description": "In this Cosmere novel, Yumi, a spirit summoner, and Nikaro, a nightmare painter, find their lives intertwined as they confront a world filled with darkness and dreams.",
+    "cover": "/Fantasy/ACourtOfWingsAndRuin-Cover.jpg",
+    "spine": "/Fantasy/ACourtofWingsandRuin-Spine.jpeg",
+    "category": "Fantasy",
+    "quantity": 6
+  },
+  {
+    "id": 58,
+    "title": "Crooked Kingdom",
+    "author": "Leigh Bardugo",
+    "year": 2023,
+    "genre": "Fantasy",
+    "language": "English",
+    "pages": 479,
+    "publisher": "Dragonsteel Entertainment",
+    "origin": "United States",
+    "price": 18.99,
+    "oldPrice": 24.99,
+    "description": "In this Cosmere novel, Yumi, a spirit summoner, and Nikaro, a nightmare painter, find their lives intertwined as they confront a world filled with darkness and dreams.",
+    "cover": "/Fantasy/CrookedKingdom-Cover.jpg",
+    "spine": "/Fantasy/CrookedKingdom-Spine.png",
+    "category": "Fantasy",
+    "quantity": 6
+  },
+  {
+    "id": 59,
+    "title": "The Wren in the Holly Library",
+    "author": "K.A. Linde",
+    "year": 2023,
+    "genre": "Fantasy",
+    "language": "English",
+    "pages": 479,
+    "publisher": "Dragonsteel Entertainment",
+    "origin": "United States",
+    "price": 18.99,
+    "oldPrice": 24.99,
+    "description": "In this Cosmere novel, Yumi, a spirit summoner, and Nikaro, a nightmare painter, find their lives intertwined as they confront a world filled with darkness and dreams.",
+    "cover": "/Fantasy/TheWrenInTheHollyLibrary-Cover.jpg",
+    "spine": "/Fantasy/TheWrenIntheHollyLibrary-Spine.png",
+    "category": "Fantasy",
+    "quantity": 6
+  },
+  {
+    "id": 60,
+    "title": "Twilight",
+    "author": "Stephenie Meyer",
+    "year": 2023,
+    "genre": "Fantasy",
+    "language": "English",
+    "pages": 479,
+    "publisher": "Dragonsteel Entertainment",
+    "origin": "United States",
+    "price": 18.99,
+    "oldPrice": 24.99,
+    "description": "In this Cosmere novel, Yumi, a spirit summoner, and Nikaro, a nightmare painter, find their lives intertwined as they confront a world filled with darkness and dreams.",
+    "cover": "/Fantasy/Twilight-Cover.jpg",
+    "spine": "/Fantasy/Twilight-Spine.jpeg",
     "category": "Fantasy",
     "quantity": 6
   }
