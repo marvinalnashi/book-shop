@@ -18,10 +18,20 @@ interface Book {
 
 export default function StandardPage() {
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+    const [sortField, setSortField] = useState<'title' | 'author' | 'year'>('title')
+    const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc')
 
-    const categories = ['Fantasy', 'Non-Fiction', 'Thriller']
+    const categories = ['Fantasy', 'Non-fiction', 'Thriller']
     const grouped = categories.reduce((acc, genre) => {
-        acc[genre] = booksData.filter(book => book.genre === genre)
+        const books = booksData.filter(book => book.genre === genre)
+        books.sort((a, b) => {
+            let result =
+                sortField === 'year'
+                    ? a.year - b.year
+                    : a[sortField].localeCompare(b[sortField])
+            return sortDirection === 'asc' ? result : -result
+        })
+        acc[genre] = books
         return acc
     }, {} as Record<string, Book[]>)
 
@@ -35,6 +45,26 @@ export default function StandardPage() {
     return (
         <div className="space-y-12">
             <h2 className="text-2xl font-bold">All Books</h2>
+
+            <div className="flex gap-4 mb-6">
+                <select
+                    value={sortField}
+                    onChange={(e) => setSortField(e.target.value as any)}
+                    className="border px-4 py-2 rounded"
+                >
+                    <option value="title">Sort by Title</option>
+                    <option value="author">Sort by Author</option>
+                    <option value="year">Sort by Year</option>
+                </select>
+                <select
+                    value={sortDirection}
+                    onChange={(e) => setSortDirection(e.target.value as any)}
+                    className="border px-4 py-2 rounded"
+                >
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            </div>
 
             {categories.map(category => {
                 const booksToShow = expandedCategories[category]
