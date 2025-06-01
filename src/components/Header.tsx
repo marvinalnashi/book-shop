@@ -22,9 +22,14 @@ export default function Header() {
 
     return (
         <header className="bg-white shadow-md mb-6 px-4 py-3 flex justify-between items-center sticky top-0 z-50">
-            <Link href="/" className="text-xl font-bold">
-                Book Shop
+            <Link href="/" className="flex items-center gap-2">
+                <img
+                    src="/logo.png"
+                    alt="Website logo"
+                    className="h-10 w-auto object-contain"
+                />
             </Link>
+
 
             <nav className="flex items-center gap-4">
                 <Link href="/cart" className="relative">
