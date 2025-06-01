@@ -23,8 +23,8 @@ export default function LobbyPage() {
         <div className="flex flex-col items-center justify-center h-screen space-y-8">
             <h1 className="text-3xl font-bold">Choose Interface</h1>
             <div className="flex gap-6">
-                <button onClick={() => startSession('standard')} className="px-6 py-3 bg-blue-600 text-white rounded">Standard Interface</button>
-                <button onClick={() => startSession('metaphor')} className="px-6 py-3 bg-green-600 text-white rounded">Metaphor-based Interface</button>
+                <button onClick={() => startSession('standard')} className="px-6 py-3 bg-blue-600 text-white rounded">Interface 1</button>
+                <button onClick={() => startSession('metaphor')} className="px-6 py-3 bg-green-600 text-white rounded">Interface 2</button>
             </div>
         </div>
     )

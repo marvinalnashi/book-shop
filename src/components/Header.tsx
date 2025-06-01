@@ -99,8 +99,9 @@ export default function Header() {
             {showFinishModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white rounded-lg p-6 w-96">
-                        <h2 className="text-lg font-semibold mb-4">Session Completed</h2>
-                        <p className="mb-2">
+                        <h2 className="text-lg font-semibold mb-4">Session finalisation</h2>
+                        <p>Please make sure you've completed all of your tasks before starting the survey!</p>
+                        <p className="mb-2 mt-4">
                             Your User ID (Session ID):
                         </p>
                         <div className="flex items-center gap-2 mb-4">
