@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 export interface CartItem {
     id: number
@@ -18,6 +19,9 @@ interface CartContextType {
     removeItem: (id: number) => void
     updateQuantity: (id: number, quantity: number) => void
     clearCart: () => void
+    cartCount: number
+    startNewSession: () => void
+    sessionId: string
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
@@ -30,10 +34,20 @@ export const useCart = () => {
 
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     const [items, setItems] = useState<CartItem[]>([])
+    const [sessionId, setSessionId] = useState<string>('')
 
     useEffect(() => {
-        const stored = localStorage.getItem('cart')
-        if (stored) setItems(JSON.parse(stored))
+        const storedCart = localStorage.getItem('cart')
+        if (storedCart) setItems(JSON.parse(storedCart))
+
+        const storedSession = sessionStorage.getItem('sessionId')
+        if (storedSession) {
+            setSessionId(storedSession)
+        } else {
+            const newSession = uuidv4()
+            setSessionId(newSession)
+            sessionStorage.setItem('sessionId', newSession)
+        }
     }, [])
 
     useEffect(() => {
@@ -62,8 +76,26 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
     const clearCart = () => setItems([])
 
+    const startNewSession = () => {
+        const newSession = uuidv4()
+        sessionStorage.setItem('sessionId', newSession)
+        setSessionId(newSession)
+        location.reload()
+    }
+
+    const cartCount = items.reduce((sum, item) => sum + item.quantity, 0)
+
     return (
-        <CartContext.Provider value={{ items, addItem, removeItem, updateQuantity, clearCart }}>
+        <CartContext.Provider value={{
+            items,
+            addItem,
+            removeItem,
+            updateQuantity,
+            clearCart,
+            cartCount,
+            startNewSession,
+            sessionId
+        }}>
             {children}
         </CartContext.Provider>
     )
